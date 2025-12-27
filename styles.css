@@ -1,0 +1,85 @@
+:root{
+  --color-primary:#0d3b66;
+  --color-secondary:#f4a261;
+  --color-accent:#e76f51;
+  --color-teal:#2a9d8f;
+  --neutral-100:#f8f9fa;
+  --text-dark:#212529;
+  --radius:8px;
+  --btn-radius:4px;
+  --shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+*{box-sizing:border-box}
+html{font-family:'Open Sans',system-ui,Arial,sans-serif;font-size:16px;color:var(--text-dark);background:var(--neutral-100);-webkit-font-smoothing:antialiased}
+body{margin:0;line-height:1.45}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#fff;padding:.5rem;border-radius:4px}
+
+/* Emergency banner */
+.emergency-banner{position:fixed;left:0;right:0;top:0;background:var(--color-accent);color:#fff;padding:.5rem 0;z-index:999;border-bottom:4px solid rgba(0,0,0,0.06)}
+.emergency-banner .container{display:flex;align-items:center;justify-content:space-between}
+.emergency-banner a{color:#fff;font-weight:700}
+.dismiss{background:transparent;border:0;color:#fff;font-size:1rem}
+
+/* Header */
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e9ecef;z-index:900}
+.header-inner{display:flex;align-items:center;gap:1rem;padding:.6rem}
+.logo{height:42px}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.main-nav a{color:var(--text-dark);text-decoration:none;padding:.3rem .5rem}
+.header-phone{margin-left:auto;background:linear-gradient(180deg,var(--color-primary),#0b3357);color:#fff;padding:.5rem .75rem;border-radius:6px;text-decoration:none}
+.mobile-menu{display:none}
+
+/* Hero */
+.hero{padding:3rem 0;background:linear-gradient(180deg, #fff, #fbfdff)}
+.hero-inner{display:flex;flex-direction:column;gap:1.5rem;align-items:center}
+.hero-copy h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.6rem;margin:0;color:var(--color-primary)}
+.lead{color:#445;max-width:42rem}
+.hero-ctas{display:flex;gap:.6rem;margin-top:.75rem}
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:var(--btn-radius);text-decoration:none}
+.btn-cta{background:var(--color-secondary);color:#fff;font-weight:700;box-shadow:var(--shadow)}
+.btn-outline{border:1px solid #dfe6ea;background:#fff;color:var(--color-primary)}
+.btn-primary{background:var(--color-primary);color:#fff;padding:.5rem .8rem;border-radius:6px}
+.btn-urgent{background:#fff;color:var(--color-accent);font-weight:700;border-radius:6px}
+.btn-small{padding:.4rem .6rem;font-size:.9rem}
+.center{text-align:center;margin-top:1rem}
+
+.hero-media img{max-width:320px;border-radius:8px;box-shadow:var(--shadow)}
+
+.cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem}
+.card{background:#fff;padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.5rem}
+.card-icon{font-size:1.6rem}
+.price{font-weight:700;color:var(--color-primary)}
+.card-actions{display:flex;gap:.5rem;margin-top:auto}
+
+.badges{display:flex;gap:1rem;list-style:none;padding:0}
+.carousel{margin-top:1rem}
+.slide{display:none}
+.slide.active{display:block}
+.testimonial cite{display:block;margin-top:.5rem;color:#6b6b6b}
+
+.accordion .acc-trigger{width:100%;text-align:left;padding:.8rem;border:0;background:#fff;border-radius:6px;margin-top:.5rem}
+.acc-panel{display:none;padding:.75rem;background:#f6f8fa;border-radius:6px;margin-top:.25rem}
+
+.site-footer{background:#fff;padding:1.5rem 0;border-top:1px solid #e9ecef}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:center}
+
+/* Responsive */
+@media(min-width:700px){
+  .hero-inner{flex-direction:row;align-items:center}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .mobile-menu{display:none}
+}
+@media(max-width:699px){
+  .main-nav{display:none}
+  .mobile-menu{display:inline-block;margin-left:.5rem}
+  .header-phone{display:none}
+}
+
+/* Accessibility: focus styles */
+a:focus, button:focus{outline:3px solid #ffd77a;outline-offset:2px}
+
+/* Minor utilities */
+.muted{color:#6b7280}
+.btn-secondary{background:#fff;border:1px solid #d1d5db;color:var(--color-primary)}

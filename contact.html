@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact & Booking — Summit Plumbing</title>
+  <meta name="description" content="Contact Summit Plumbing — Call, message, or schedule online. Embedded booking and service area map.">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><img src="assets/icons/logo.svg" alt="logo" class="logo"><nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li></ul></nav></div></header>
+  <main id="main" class="container">
+    <h1>Contact & Book</h1>
+    <div class="contact-grid">
+      <section>
+        <h2>Call Now (24/7)</h2>
+        <a class="btn btn-cta" href="tel:+15551234567">(555) 123-4567</a>
+
+        <h2 id="booking">Schedule Online</h2>
+        <p>Choose a service and preferred date/time.</p>
+        <!-- Calendly embed placeholder: replace the href with your actual Calendly link -->
+        <div class="calendly-embed">
+          <a class="btn btn-outline" href="https://calendly.com/your-company" target="_blank" rel="noopener">Open Booking</a>
+        </div>
+
+        <h2>Email / Form</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST" aria-label="Contact form">
+          <label for="name">Name</label>
+          <input id="name" name="name" required>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" required>
+          <label for="service">Service</label>
+          <select id="service" name="service"><option>Emergency Repair</option><option>Water Heater</option><option>Drain Cleaning</option></select>
+          <label for="date">Preferred date</label>
+          <input id="date" name="date" type="date">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+          <button class="btn btn-primary" type="submit">Request Booking</button>
+        </form>
+      </section>
+
+      <aside>
+        <h2>Service Area</h2>
+        <p>We serve Austin, Round Rock, Cedar Park, Pflugerville and nearby ZIP codes.</p>
+        <h2>Map</h2>
+        <div style="height:240px;background:#e9ecef;display:flex;align-items:center;justify-content:center;border-radius:8px">Google Maps embed (replace with iframe)</div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div><img src="assets/icons/logo-footer.svg" alt="logo"></div></div></footer>
+</body>
+</html>
